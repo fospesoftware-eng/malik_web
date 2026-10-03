@@ -769,7 +769,7 @@ ul{list-style:none}
   overflow:hidden;isolation:isolate;
 }
 .page-hero.ph-short{min-height:50svh;padding-top:150px}
-.ph-img{position:absolute;inset:-6%;width:calc(100% + 12%);height:calc(100% + 12%);object-fit:cover;z-index:-2;animation:heroKen 26s ease-in-out infinite alternate}
+.ph-img{position:absolute;inset:-6%;width:calc(100% + 12%);height:calc(100% + 12%);max-width:none;object-fit:cover;z-index:-2;animation:heroKen 26s ease-in-out infinite alternate}
 .ph-veil{
   position:absolute;inset:0;z-index:-1;
   background:
