@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malik — Ultra-Luxury Private Residences</title>
+<meta name="description" content="Malik crafts ultra-luxury private residences where architecture, landscape and service become one. Explore the Coastal Collection 2026.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 140'%3E%3Crect width='100' height='140' fill='%23111316'/%3E%3Cpath fill-rule='evenodd' fill='%23D9BC73' d='M50 6 L59 20 V64 H41 V20 Z M50 25 L47 29 V58 H53 V29 Z'/%3E%3Cpath d='M14 134 V34 L45 62' stroke='%23D9BC73' stroke-width='8' fill='none'/%3E%3Cpath d='M86 134 V34 L55 62' stroke='%23D9BC73' stroke-width='8' fill='none'/%3E%3Cpath d='M44 76 V134' stroke='%23D9BC73' stroke-width='8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://trae-api-cn.mchost.guru">
+<link rel="preconnect" href="https://lf-cdn.trae.com.cn" crossorigin>
+<link rel="dns-prefetch" href="https://lf-cdn.trae.com.cn">
+<link rel="dns-prefetch" href="https://trae-api-cn.mchost.guru">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+  // Apply saved theme before paint to avoid flash
+  (function(){
+    var t = localStorage.getItem('malik-theme');
+    if (!t) t = 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body id="top">
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Malik — home">
+      <svg class="brand-mark" viewBox="0 0 100 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path fill-rule="evenodd" d="M50 6 L59 20 V64 H41 V20 Z M50 25 L47 29 V58 H53 V29 Z" fill="currentColor"/>
+        <path d="M14 134 V34 L45 62" stroke="currentColor" stroke-width="8" stroke-linejoin="miter"/>
+        <path d="M86 134 V34 L55 62" stroke="currentColor" stroke-width="8" stroke-linejoin="miter"/>
+        <path d="M44 76 V134" stroke="currentColor" stroke-width="8"/>
+      </svg>
+      <span class="brand-name">MALIK</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <a href="residences.html" class="nav-link">Residences</a>
+      <a href="amenities.html" class="nav-link">Amenities</a>
+      <a href="dining.html" class="nav-link">Dining</a>
+      <a href="pricing.html" class="nav-link">Pricing</a>
+      <a href="location.html" class="nav-link">Location</a>
+      <a href="about.html" class="nav-link">About</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch between light and dark theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 13.4A8.5 8.5 0 0 1 10.6 3.8a8.5 8.5 0 1 0 9.6 9.6Z"/></svg>
+      </button>
+      <a href="booking.html" class="btn btn-pill btn-gold header-enquire magnetic">
+        <span>Book Your Stay</span>
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9.5 4.5 13 8l-3.5 3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <button class="burger" id="menuOpen" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu-head">
+    <span class="brand"><svg class="brand-mark" viewBox="0 0 100 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path fill-rule="evenodd" d="M50 6 L59 20 V64 H41 V20 Z M50 25 L47 29 V58 H53 V29 Z" fill="currentColor"/>
+      <path d="M14 134 V34 L45 62" stroke="currentColor" stroke-width="8" stroke-linejoin="miter"/>
+      <path d="M86 134 V34 L55 62" stroke="currentColor" stroke-width="8" stroke-linejoin="miter"/>
+      <path d="M44 76 V134" stroke="currentColor" stroke-width="8"/>
+    </svg><span class="brand-name">MALIK</span></span>
+    <button class="menu-close" id="menuClose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+  </div>
+  <nav class="mobile-nav" aria-label="Mobile">
+    <a href="residences.html"><em>01</em>Residences</a>
+    <a href="amenities.html"><em>02</em>Amenities &amp; Lifestyle</a>
+    <a href="dining.html"><em>03</em>Private Dining</a>
+    <a href="booking.html"><em>04</em>Book a Stay</a>
+    <a href="pricing.html"><em>05</em>Pricing &amp; Availability</a>
+    <a href="location.html"><em>06</em>Location</a>
+    <a href="about.html"><em>07</em>About</a>
+  </nav>
+  <a href="booking.html" class="btn btn-pill btn-gold mobile-cta"><span>Reserve Your Stay</span></a>
+</div>
+
+<main>
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero" id="hero">
+  <div class="hero-bg" id="heroBg">
+    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Breathtaking%20ultra%20luxury%20modern%20coastal%20villa%20with%20cantilevered%20white%20stone%20terraces%20and%20infinity%20pool%20merging%20with%20turquoise%20ocean%2C%20distant%20mountain%20coastline%2C%20soft%20golden%20sunrise%20light%2C%20calm%20water%2C%20editorial%20architectural%20photography%2C%20serene%2C%20cinematic%2C%20hyperrealistic%2C%20premium%20real%20estate&image_size=landscape_16_9" alt="Ultra-luxury coastal villa with an infinity pool above the ocean at sunrise" fetchpriority="high" class="hero-img" id="heroImg">
+    <div class="hero-veil"></div>
+    <div class="hero-spotlight" id="heroSpotlight"></div>
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow" data-depth="8">
+      <span class="gold-line"></span>
+      Ultra-Luxury Private Residences
+      <span class="gold-line"></span>
+    </p>
+    <h1 class="hero-word" aria-label="MALIK">
+      <span class="hw-letter" data-depth="14" style="--ld:.00s">M</span><span class="hw-letter" data-depth="22" style="--ld:.07s">A</span><span class="hw-letter" data-depth="10" style="--ld:.14s">L</span><span class="hw-letter" data-depth="20" style="--ld:.21s">I</span><span class="hw-letter" data-depth="15" style="--ld:.28s">K</span>
+    </h1>
+    <p class="hero-tagline" data-depth="6">
+      Where architecture meets the horizon — <em>The Coastal Collection</em>, 2026
+    </p>
+  </div>
+
+  <a href="residences.html" class="hero-circle magnetic" aria-label="Explore residences">
+    <span class="hc-text">Explore<br>Residences</span>
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 10h12M11.5 5.5 16 10l-4.5 4.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+
+  <div class="hero-meta glass-chip" data-depth="10">
+    <span class="hm-dot"></span>
+    <div>
+      <strong>Malik Coastal Residences</strong>
+      <small>25.0762° N — 56.2419° E</small>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <span class="sh-line"><i></i></span>
+  </div>
+</section>
+
+<!-- ═══════════════ MARQUEE ═══════════════ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Malik Residences <i>✦</i> Private Living <i>✦</i> Ultra Luxury <i>✦</i> Coastal Collection <i>✦</i> Bespoke Service <i>✦</i> </span>
+    <span>Malik Residences <i>✦</i> Private Living <i>✦</i> Ultra Luxury <i>✦</i> Coastal Collection <i>✦</i> Bespoke Service <i>✦</i> </span>
+  </div>
+</div>
+
+<!-- ═══════════════ MANIFESTO ═══════════════ -->
+<section class="section manifesto">
+  <div class="wrap manifesto-grid">
+    <h2 class="mega reveal">
+      We create homes that<br>
+      <em class="gold-serif">belong</em> to their<br>
+      landscape
+    </h2>
+    <div class="manifesto-aside reveal" style="--d:.15s">
+      <p>From the shoreline to the ridgeline, every Malik residence responds to the character of its place — its light, its materials, its climate and its quiet natural rhythm.</p>
+      <a href="about.html" class="link-arrow">Our Approach
+        <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 9h12M10 4l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <div class="manifesto-stats">
+        <div><strong>25</strong><span>Years of craft</span></div>
+        <div><strong>120</strong><span>Residences delivered</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ RESIDENCES ═══════════════ -->
+<section class="section section-dark residences" id="residences">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <p class="section-label light"><span class="sl-num">01</span> Residences</p>
+        <h2 class="section-title light">Homes that cannot<br>be <em class="gold-serif">replicated</em></h2>
+      </div>
+      <p class="section-head-note">A limited collection of architectural one-of-one residences, shaped around light, privacy and uninterrupted nature.</p>
+    </div>
+
+    <!-- Featured cinematic card -->
+    <div class="feature-card reveal">
+      <div class="feature-media" id="featureMedia">
+        <img class="fm-img is-active" data-fm="0" loading="lazy" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Interior%20of%20ultra%20luxury%20modern%20glass%20mansion%2C%20double%20height%20floor%20to%20ceiling%20windows%2C%20elegant%20white%20designer%20sofas%2C%20polished%20travertine%20floor%2C%20infinity%20pool%20and%20tall%20pine%20trees%20outside%2C%20soft%20daylight%2C%20architectural%20digest%2C%20photorealistic&image_size=landscape_16_9" alt="Double-height glass living room opening to an infinity pool">
+        <img class="fm-img" data-fm="1" loading="lazy" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Ultra%20luxury%20modern%20white%20villa%20terrace%20with%20infinity%20pool%20overlooking%20the%20ocean%20at%20blue%20hour%2C%20sculptural%20loungers%2C%20warm%20interior%20glow%2C%20cinematic%20architectural%20photography%2C%20photorealistic&image_size=landscape_16_9" alt="Villa terrace with infinity pool above the ocean at blue hour">
+        <img class="fm-img" data-fm="2" loading="lazy" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Ultra%20luxury%20minimal%20bedroom%20suite%20with%20floor%20to%20ceiling%20glass%20walls%20facing%20the%20sea%2C%20linen%20bedding%2C%20oak%20and%20travertine%2C%20soft%20morning%20light%2C%20premium%20interior%20photography%2C%20photorealistic&image_size=landscape_16_9" alt="Minimal luxury bedroom suite with glass walls facing the sea">
+        <div class="feature-veil"></div>
+
+        <div class="feature-caption">
+          <span class="fc-eyebrow">The Signature Villa</span>
+          <h3>Residences that<br>cannot be replicated</h3>
+          <p>Discover a space that reflects your lifestyle — sculpted in glass, stone and silence.</p>
+          <a href="residences.html" class="btn-square magnetic" aria-label="View residences">
+            <svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 14 14 4M6.5 4H14v7.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="feature-thumbs">
+          <button class="ft-thumb is-active" data-fm-target="0" aria-label="View living space"><img loading="lazy" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Interior%20of%20ultra%20luxury%20modern%20glass%20mansion%2C%20double%20height%20floor%20to%20ceiling%20windows%2C%20elegant%20white%20designer%20sofas%2C%20polished%20travertine%20floor%2C%20infinity%20pool%20and%20tall%20pine%20trees%20outside%2C%20soft%20daylight%2C%20architectural%20digest%2C%20photorealistic&image_size=square" alt=""></button>
+          <button class="ft-thumb" data-fm-target="1" aria-label="View terrace"><img loading="lazy" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Ultra%20luxury%20modern%20white%20villa%20terrace%20with%20infinity%20pool%20overlooking%20the%20ocean%20at%20blue%20hour%2C%20sculptural%20loungers%2C%20warm%20interior%20glow%2C%20cinematic%20architectural%20photography%2C%20photorealistic&image_size=square" alt=""></button>
+          <button class="ft-thumb" data-fm-target="2" aria-label="View suite"><img loading="lazy" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Ultra%20luxury%20minimal%20bedroom%20suite%20with%20floor%20to%20ceiling%20glass%20walls%20facing%20the%20sea%2C%20linen%20bedding%2C%20oak%20and%20travertine%2C%20soft%20morning%20light%2C%20premium%20interior%20photography%2C%20photorealistic&image_size=square" alt=""></button>
+          <button class="ft-next" id="featureNext" aria-label="Next residence view">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 10h12M11.5 5.5 16 10l-4.5 4.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+
+        <div class="feature-index"><span id="fmCurrent">01</span> / 03</div>
+      </div>
+    </div>
+
+    <!-- Collections panel -->
+    <div class="collections panel reveal">
+      <div class="collections-head">
+        <div>
+          <h3>Exceptional<br>Collections</h3>
+          <p>Discover residences in carefully selected destinations where nature, privacy and lifestyle come together.</p>
+        </div>
+        <a href="residences.html" class="btn btn-pill btn-dark magnetic">
+          <span>Explore the Collection</span>
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 8h10M9.5 4.5 13 8l-3.5 3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="collections-grid res-grid" data-featured-grid></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ AMENITIES & LIFESTYLE ═══════════════ -->
+<section class="section amenities" id="amenities">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <p class="section-label"><span class="sl-num">02</span> Amenities &amp; Lifestyle</p>
+        <h2 class="section-title">Everyday, elevated<br>to <em class="gold-serif">art</em></h2>
+      </div>
+      <p class="section-head-note">A private world of wellness, taste and leisure — attended quietly, around the clock.</p>
+    </div>
+
+    <div class="amen-grid">
+      <div class="amen-stage reveal">
+        <img class="as-img is-active" data-as="0" loading="lazy" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Infinity%20swimming%20pool%20of%20ultra%20luxury%20villa%20at%20sunset%2C%20teak%20loungers%2C%20ocean%20horizon%2C%20cinematic%20warm%20golden%20light%2C%20photorealistic&image_size=landscape_4_3" alt="Infinity pool at sunset">
+        <img class="as-img" data-as="1" loading="lazy" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Ultra%20luxury%20private%20spa%20interior%20in%20cream%20marble%20and%20stone%2C%20candles%2C%20soft%20steam%2C%20brushed%20gold%20brass%20details%2C%20serene%20moody%20light%2C%20photorealistic&image_size=landscape_4_3" alt="Private marble spa with candles">
+        <img class="as-img" data-as="2" loading="lazy" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Luxury%20private%20home%20cinema%20room%20with%20dark%20velvet%20loungers%2C%20warm%20ambient%20light%2C%20acoustic%20wood%20wall%20panels%2C%20premium%20interior%20photography%2C%20photorealistic&image_size=landscape_4_3" alt="Private home cinema with velvet loungers">
+        <img class="as-img" data-as="3" loading="lazy" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Luxury%20residential%20fitness%20studio%20with%20floor%20to%20ceiling%20windows%20overlooking%20tropical%20gardens%2C%20polished%20stone%20floors%2C%20premium%20equipment%2C%20soft%20daylight%2C%20photorealistic&image_size=landscape_4_3" alt="Fitness studio with garden views">
+        <img class="as-img" data-as="4" loading="lazy" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Private%20fine%20dining%20room%20in%20ultra%20luxury%20modern%20mansion%2C%20marble%20chef%20table%20set%20for%20eight%2C%20candlelight%2C%20glass%20wine%20cellar%20wall%2C%20moody%20cinematic%20golden%20atmosphere%2C%20photorealistic&image_size=landscape_4_3" alt="Wine cellar and tasting room">
+        <img class="as-img" data-as="5" loading="lazy" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Interior%20of%20luxury%20coastal%20villa%2C%20double%20height%20glass%20living%20room%20opening%20to%20sea%20view%20terrace%2C%20elegant%20minimal%20cream%20furniture%2C%20soft%20daylight%2C%20photorealistic&image_size=landscape_4_3" alt="Concierge lounge with sea view">
+        <div class="as-veil"></div>
+        <div class="as-caption">
+          <span class="as-num" id="asNum">01</span>
+          <h3 id="asTitle">Infinity Pool &amp; Beach Club</h3>
+          <p id="asDesc">A 25-metre horizon pool, private cabanas and a beach butler service from dawn to last light.</p>
+        </div>
+      </div>
+
+      <ul class="amen-list reveal" style="--d:.1s">
+        <li class="amen-item is-active" data-index="0">
+          <button class="ai-head">
+            <span class="ai-num">01</span>
+            <span class="ai-title">Infinity Pool &amp; Beach Club</span>
+            <span class="ai-icon"></span>
+          </button>
+          <div class="ai-body"><p>A 25-metre horizon pool, private cabanas and a beach butler service from dawn to last light.</p></div>
+        </li>
+        <li class="amen-item" data-index="1">
+          <button class="ai-head">
+            <span class="ai-num">02</span>
+            <span class="ai-title">Private Spa &amp; Hammam</span>
+            <span class="ai-icon"></span>
+          </button>
+          <div class="ai-body"><p>Sculpted in cream marble, with treatment suites, a thermal hammam and resident therapists.</p></div>
+        </li>
+        <li class="amen-item" data-index="2">
+          <button class="ai-head">
+            <span class="ai-num">03</span>
+            <span class="ai-title">Cinema &amp; Cigar Lounge</span>
+            <span class="ai-icon"></span>
+          </button>
+          <div class="ai-body"><p>A Dolby private cinema in velvet and oak, joined by a humidor lounge for quiet evenings.</p></div>
+        </li>
+        <li class="amen-item" data-index="3">
+          <button class="ai-head">
+            <span class="ai-num">04</span>
+            <span class="ai-title">Fitness &amp; Yoga Pavilion</span>
+            <span class="ai-icon"></span>
+          </button>
+          <div class="ai-body"><p>A light-filled studio with resident trainers, a yoga pavilion and recovery spa on site.</p></div>
+        </li>
+        <li class="amen-item" data-index="4">
+          <button class="ai-head">
+            <span class="ai-num">05</span>
+            <span class="ai-title">Wine Cellar &amp; Tasting Room</span>
+            <span class="ai-icon"></span>
+          </button>
+          <div class="ai-body"><p>A 3,000-bottle cellar with a master sommelier and private tastings for residents only.</p></div>
+        </li>
+        <li class="amen-item" data-index="5">
+          <button class="ai-head">
+            <span class="ai-num">06</span>
+            <span class="ai-title">Concierge &amp; Valet</span>
+            <span class="ai-icon"></span>
+          </button>
+          <div class="ai-body"><p>Round-the-clock concierge, valet, chauffeurs and private aviation coordination.</p></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PRIVATE DINING ═══════════════ -->
+<section class="section section-dark dining" id="dining">
+  <div class="wrap">
+    <div class="dining-card reveal">
+      <img class="dining-img" loading="lazy" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Private%20fine%20dining%20room%20in%20ultra%20luxury%20modern%20mansion%2C%20marble%20chef%20table%20set%20for%20eight%2C%20candlelight%2C%20glass%20wine%20cellar%20wall%2C%20moody%20cinematic%20golden%20atmosphere%2C%20photorealistic&image_size=landscape_16_9" alt="Candlelit private dining room with marble chef's table">
+      <div class="dining-veil"></div>
+
+      <div class="dining-content">
+        <p class="section-label light"><span class="sl-num">03</span> Private Dining</p>
+        <h2 class="section-title light">A table reserved<br><em class="gold-serif">only for you</em></h2>
+        <p class="dining-text">Michelin-trained chefs, a master sommelier and a single seating each evening — hosted in your residence, or at the chef's table overlooking the sea.</p>
+        <div class="dining-chips">
+          <span>Michelin-trained chefs</span>
+          <span>Sommelier pairings</span>
+          <span>In-residence service</span>
+        </div>
+        <a href="dining.html" class="btn btn-pill btn-gold magnetic"><span>Explore Private Dining</span>
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9.5 4.5 13 8l-3.5 3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <aside class="menu-card">
+        <header>
+          <span>Tonight's Table</span>
+          <em>Chef's Selection</em>
+        </header>
+        <ul>
+          <li><p>Tuna Crudo <i>· yuzu, caviar, gold leaf</i></p><b>01</b></li>
+          <li><p>Heirloom Burrata <i>· heirloom tomato, basil oil</i></p><b>02</b></li>
+          <li><p>A5 Wagyu Striploin <i>· smoked bone marrow</i></p><b>03</b></li>
+          <li><p>Grand Marnier Soufflé <i>· vanilla bean cream</i></p><b>04</b></li>
+        </ul>
+        <footer>Nine courses — paired by our sommelier</footer>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PRICING & AVAILABILITY ═══════════════ -->
+<section class="section pricing" id="pricing">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <p class="section-label"><span class="sl-num">04</span> Pricing &amp; Availability</p>
+        <h2 class="section-title">Choose your<br><em class="gold-serif">address</em></h2>
+      </div>
+      <p class="section-head-note">Transparent, residence-level pricing. Each home is sold freehold, with private viewings available on request.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <article class="price-card reveal">
+        <header>
+          <span class="pc-kind">The Sky Residences</span>
+          <h3>Penthouse Collection</h3>
+          <p class="pc-price">From <strong>$4.2M</strong></p>
+          <span class="pc-status">6 remaining</span>
+        </header>
+        <ul>
+          <li>420–560 m² of interior space</li>
+          <li>3–4 bedrooms &amp; private lift lobby</li>
+          <li>Wrap-around sky terrace &amp; plunge pool</li>
+          <li>Two dedicated parking bays</li>
+        </ul>
+        <a href="pricing.html" class="btn btn-outline magnetic"><span>Check Availability</span></a>
+      </article>
+
+      <article class="price-card featured reveal" style="--d:.12s">
+        <span class="pc-ribbon">Most Requested</span>
+        <header>
+          <span class="pc-kind">The Coastal Collection</span>
+          <h3>Oceanfront Villa</h3>
+          <p class="pc-price">From <strong>$8.9M</strong></p>
+          <span class="pc-status gold">Limited release</span>
+        </header>
+        <ul>
+          <li>780–1,100 m² with private gardens</li>
+          <li>5 bedrooms &amp; staff quarters</li>
+          <li>Private infinity pool &amp; beach access</li>
+          <li>Dedicated concierge &amp; golf buggy</li>
+        </ul>
+        <a href="pricing.html" class="btn btn-pill btn-gold magnetic"><span>Schedule a Viewing</span></a>
+      </article>
+
+      <article class="price-card reveal" style="--d:.24s">
+        <header>
+          <span class="pc-kind">The Peninsula Estates</span>
+          <h3>Private Estate</h3>
+          <p class="pc-price">From <strong>$14.5M</strong></p>
+          <span class="pc-status">By invitation</span>
+        </header>
+        <ul>
+          <li>1,400 m²+ on 1-hectare plots</li>
+          <li>Fully bespoke architecture &amp; interiors</li>
+          <li>Private marina berth &amp; helipad access</li>
+          <li>Lifetime estate management</li>
+        </ul>
+        <a href="pricing.html" class="btn btn-outline magnetic"><span>Register Interest</span></a>
+      </article>
+    </div>
+
+    <div class="pricing-assure reveal">
+      <span><i>◆</i> Private escorted viewings</span>
+      <span><i>◆</i> Secured escrow payments</span>
+      <span><i>◆</i> Flexible completion schedule</span>
+      <span><i>◆</i> Full legal &amp; residency support</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ LOCATION ═══════════════ -->
+<section class="section section-dark location" id="location">
+  <div class="wrap location-grid">
+    <div class="location-info reveal">
+      <p class="section-label light"><span class="sl-num">05</span> Location</p>
+      <h2 class="section-title light">The finest address<br>on the <em class="gold-serif">coast</em></h2>
+      <p class="location-text">Set on a private peninsula where the mountains meet the sea — minutes from the marina, the old town and an international airport, yet quietly removed from it all.</p>
+
+      <ul class="location-times">
+        <li><span class="lt-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 16l21-5L2 6l3 5-3 5Z" stroke-linejoin="round"/></svg></span><div>International Airport<small>Private terminal · 18 min</small></div><b>18m</b></li>
+        <li><span class="lt-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 18s2-8 9-8 9 8 9 8" stroke-linecap="round"/><circle cx="12" cy="11" r="2.2"/></svg></span><div>Marina Bay &amp; Yacht Club<small>Superyacht berths · 6 min</small></div><b>6m</b></li>
+        <li><span class="lt-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg></span><div>Old Town &amp; Fine Dining Quarter<small>Michelin row · 4 min</small></div><b>4m</b></li>
+        <li><span class="lt-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3v18M3 8h18M5 21h14" stroke-linecap="round"/></svg></span><div>International Schools<small>Top-tier academies · 12 min</small></div><b>12m</b></li>
+        <li><span class="lt-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="9" cy="9" r="5"/><path d="m13 13 7 7M15 9h5M17.5 6.5v5" stroke-linecap="round"/></svg></span><div>Golf &amp; Country Club<small>Championship course · 9 min</small></div><b>9m</b></li>
+      </ul>
+    </div>
+
+    <div class="location-map reveal" style="--d:.15s">
+      <img loading="lazy" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Aerial%20dusk%20view%20of%20glamorous%20coastal%20city%20peninsula%20with%20marina%20bay%2C%20golden%20city%20lights%2C%20luxury%20hillside%20homes%20along%20the%20coast%2C%20cinematic%2C%20photorealistic&image_size=landscape_4_3" alt="Aerial dusk view of the coastal peninsula and marina">
+      <div class="map-veil"></div>
+      <div class="map-pin">
+        <span class="pin-pulse"></span>
+        <span class="pin-dot"></span>
+      </div>
+      <div class="map-card glass-chip">
+        <strong>Malik Coastal Residences</strong>
+        <small>1 Ocean Peninsula Drive · Private Bay</small>
+      </div>
+      <span class="map-coords">25.0762° N — 56.2419° E</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ABOUT ═══════════════ -->
+<section class="section about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-media reveal">
+      <img loading="lazy" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Architectural%20detail%20of%20luxury%20building%20facade%2C%20fluted%20travertine%20columns%2C%20warm%20sunlight%20and%20shadow%2C%20brushed%20brass%20gold%20accents%2C%20minimal%20editorial%20photography&image_size=portrait_4_3" alt="Travertine architectural detail with brass accents">
+      <div class="about-badge">
+        <svg viewBox="0 0 100 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path fill-rule="evenodd" d="M50 6 L59 20 V64 H41 V20 Z M50 25 L47 29 V58 H53 V29 Z" fill="currentColor"/>
+          <path d="M14 134 V34 L45 62" stroke="currentColor" stroke-width="8" stroke-linejoin="miter"/>
+          <path d="M86 134 V34 L55 62" stroke="currentColor" stroke-width="8" stroke-linejoin="miter"/>
+          <path d="M44 76 V134" stroke="currentColor" stroke-width="8"/>
+        </svg>
+        <span>House of<br>Malik — Est. 2001</span>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <p class="section-label reveal"><span class="sl-num">06</span> The House of Malik</p>
+      <h2 class="section-title reveal" style="--d:.08s">A quarter-century of<br><em class="gold-serif">quiet obsession</em></h2>
+      <p class="about-text reveal" style="--d:.16s">Malik began as a single family studio with a single conviction — that a home should feel inevitable to its place. Twenty-five years later, the studio has delivered one hundred and twenty residences across fourteen cities, yet each one begins the same way: with the land, the light, and the life that will unfold within it.</p>
+      <p class="about-text reveal" style="--d:.22s">No two Malik homes are alike. Each is conceived by hand, finished by master craftsmen, and attended for life by a service team that anticipates before it is asked.</p>
+
+      <div class="about-stats reveal" style="--d:.3s">
+        <div class="stat"><strong><span class="count" data-count="25">0</span></strong><span>Years of craft</span></div>
+        <div class="stat"><strong><span class="count" data-count="120">0</span></strong><span>Residences delivered</span></div>
+        <div class="stat"><strong><span class="count" data-count="14">0</span></strong><span>Cities worldwide</span></div>
+        <div class="stat"><strong><span class="count" data-count="42">0</span></strong><span>Design awards</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CTA ═══════════════ -->
+<section class="section cta-section" id="enquire">
+  <div class="wrap">
+    <div class="cta-card reveal">
+      <img class="cta-img" loading="lazy" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Ultra%20luxury%20villa%20terrace%20at%20twilight%20with%20warm%20glowing%20interiors%20overlooking%20infinity%20pool%20and%20calm%20sea%2C%20first%20stars%20in%20sky%2C%20cinematic%20atmospheric%2C%20photorealistic&image_size=landscape_16_9" alt="Villa terrace glowing at twilight above the sea">
+      <div class="cta-veil"></div>
+      <div class="cta-content">
+        <p class="cta-eyebrow"><span class="gold-line"></span>Private viewings by appointment<span class="gold-line"></span></p>
+        <h2 class="cta-title">Begin your story<br>at <em class="gold-serif">Malik</em></h2>
+        <p class="cta-sub">A personal advisor will arrange a private tour, helicopter arrival or virtual walkthrough — entirely at your convenience.</p>
+        <div class="cta-actions">
+          <a href="booking.html" class="btn btn-pill btn-gold magnetic btn-lg"><span>Reserve Your Stay</span>
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9.5 4.5 13 8l-3.5 3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="mailto:private@malikresidences.com" class="btn btn-pill btn-ghost btn-lg"><span>Schedule a Private Viewing</span></a>
+        </div>
+        <small class="cta-note">Strictly confidential · Limited residences for 2026</small>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand light" href="index.html" aria-label="Malik — home">
+          <svg class="brand-mark" viewBox="0 0 100 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path fill-rule="evenodd" d="M50 6 L59 20 V64 H41 V20 Z M50 25 L47 29 V58 H53 V29 Z" fill="currentColor"/>
+            <path d="M14 134 V34 L45 62" stroke="currentColor" stroke-width="8" stroke-linejoin="miter"/>
+            <path d="M86 134 V34 L55 62" stroke="currentColor" stroke-width="8" stroke-linejoin="miter"/>
+            <path d="M44 76 V134" stroke="currentColor" stroke-width="8"/>
+          </svg>
+          <span class="brand-name">MALIK</span>
+        </a>
+        <p>Ultra-luxury private residences, shaped by hand and attended for life.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M7.5 10.5V17M7.5 7.4v.1M11 17v-3.6a2.4 2.4 0 0 1 4.8 0V17M11 17v-6.5" stroke-linecap="round"/></svg></a>
+          <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
+        </div>
+      </div>
+
+      <nav class="footer-col" aria-label="Footer — explore">
+        <h4>Explore</h4>
+        <a href="residences.html">Residences</a>
+        <a href="amenities.html">Amenities &amp; Lifestyle</a>
+        <a href="dining.html">Private Dining</a>
+        <a href="booking.html">Book a Stay</a>
+        <a href="pricing.html">Pricing &amp; Availability</a>
+        <a href="location.html">Location</a>
+        <a href="about.html">About</a>
+      </nav>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>1 Ocean Peninsula Drive<br>Private Bay</p>
+        <a href="tel:+10000000000">+1 (000) 000-0000</a>
+        <a href="mailto:private@malikresidences.com">private@malikresidences.com</a>
+      </div>
+
+      <div class="footer-col footer-news">
+        <h4>The Malik List</h4>
+        <p>Private previews and new releases, before they are announced publicly.</p>
+        <form id="newsForm">
+          <input type="email" placeholder="Your email address" required aria-label="Email address">
+          <button type="submit" aria-label="Subscribe"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9h12M10 4l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </form>
+        <small class="news-note" id="newsNote">By invitation only.</small>
+      </div>
+    </div>
+
+    <div class="footer-word" aria-hidden="true">MALIK</div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Malik Residences. All rights reserved.</span>
+      <div><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

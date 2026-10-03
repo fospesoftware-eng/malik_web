@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Residence — Malik Private Stays</title>
+<meta name="description" content="A private Malik residence with dedicated host, chef and concierge. Check live dates and reserve your short stay.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 140'%3E%3Crect width='100' height='140' fill='%23111316'/%3E%3Cpath fill-rule='evenodd' fill='%23D9BC73' d='M50 6 L59 20 V64 H41 V20 Z M50 25 L47 29 V58 H53 V29 Z'/%3E%3Cpath d='M14 134 V34 L45 62' stroke='%23D9BC73' stroke-width='8' fill='none'/%3E%3Cpath d='M86 134 V34 L55 62' stroke='%23D9BC73' stroke-width='8' fill='none'/%3E%3Cpath d='M44 76 V134' stroke='%23D9BC73' stroke-width='8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://trae-api-cn.mchost.guru">
+<link rel="preconnect" href="https://lf-cdn.trae.com.cn" crossorigin>
+<link rel="dns-prefetch" href="https://lf-cdn.trae.com.cn">
+<link rel="dns-prefetch" href="https://trae-api-cn.mchost.guru">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+  (function(){
+    var t = localStorage.getItem('malik-theme'); if (!t) t = 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body>
+
+<header class="site-header is-solid" id="siteHeader">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Malik — home">
+      <svg class="brand-mark" viewBox="0 0 100 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path fill-rule="evenodd" d="M50 6 L59 20 V64 H41 V20 Z M50 25 L47 29 V58 H53 V29 Z" fill="currentColor"/>
+        <path d="M14 134 V34 L45 62" stroke="currentColor" stroke-width="8" stroke-linejoin="miter"/>
+        <path d="M86 134 V34 L55 62" stroke="currentColor" stroke-width="8" stroke-linejoin="miter"/>
+        <path d="M44 76 V134" stroke="currentColor" stroke-width="8"/>
+      </svg>
+      <span class="brand-name">MALIK</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="residences.html" class="nav-link active">Residences</a>
+      <a href="amenities.html" class="nav-link">Amenities</a>
+      <a href="dining.html" class="nav-link">Dining</a>
+      <a href="pricing.html" class="nav-link">Pricing</a>
+      <a href="location.html" class="nav-link">Location</a>
+      <a href="about.html" class="nav-link">About</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch between light and dark theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 13.4A8.5 8.5 0 0 1 10.6 3.8a8.5 8.5 0 1 0 9.6 9.6Z"/></svg>
+      </button>
+      <a href="booking.html" class="btn btn-pill btn-gold header-enquire magnetic"><span>Book Your Stay</span>
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9.5 4.5 13 8l-3.5 3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <button class="burger" id="menuOpen" aria-label="Open menu"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu-head">
+    <span class="brand"><svg class="brand-mark" viewBox="0 0 100 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path fill-rule="evenodd" d="M50 6 L59 20 V64 H41 V20 Z M50 25 L47 29 V58 H53 V29 Z" fill="currentColor"/>
+      <path d="M14 134 V34 L45 62" stroke="currentColor" stroke-width="8" stroke-linejoin="miter"/>
+      <path d="M86 134 V34 L55 62" stroke="currentColor" stroke-width="8" stroke-linejoin="miter"/>
+      <path d="M44 76 V134" stroke="currentColor" stroke-width="8"/>
+    </svg><span class="brand-name">MALIK</span></span>
+    <button class="menu-close" id="menuClose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+  </div>
+  <nav class="mobile-nav" aria-label="Mobile">
+    <a href="residences.html"><em>01</em>Residences</a>
+    <a href="amenities.html"><em>02</em>Amenities &amp; Lifestyle</a>
+    <a href="dining.html"><em>03</em>Private Dining</a>
+    <a href="booking.html"><em>04</em>Book a Stay</a>
+    <a href="pricing.html"><em>05</em>Pricing &amp; Availability</a>
+    <a href="location.html"><em>06</em>Location</a>
+    <a href="about.html"><em>07</em>About</a>
+  </nav>
+  <a href="booking.html" class="btn btn-pill btn-gold mobile-cta"><span>Reserve Your Stay</span></a>
+</div>
+
+<main data-property-page></main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand light" href="index.html" aria-label="Malik — home">
+          <svg class="brand-mark" viewBox="0 0 100 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path fill-rule="evenodd" d="M50 6 L59 20 V64 H41 V20 Z M50 25 L47 29 V58 H53 V29 Z" fill="currentColor"/>
+            <path d="M14 134 V34 L45 62" stroke="currentColor" stroke-width="8" stroke-linejoin="miter"/>
+            <path d="M86 134 V34 L55 62" stroke="currentColor" stroke-width="8" stroke-linejoin="miter"/>
+            <path d="M44 76 V134" stroke="currentColor" stroke-width="8"/>
+          </svg>
+          <span class="brand-name">MALIK</span>
+        </a>
+        <p>Ultra-luxury private residences, shaped by hand and attended for life.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M7.5 10.5V17M7.5 7.4v.1M11 17v-3.6a2.4 2.4 0 0 1 4.8 0V17M11 17v-6.5" stroke-linecap="round"/></svg></a>
+          <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
+        </div>
+      </div>
+      <nav class="footer-col" aria-label="Footer — explore">
+        <h4>Explore</h4>
+        <a href="residences.html">Residences</a>
+        <a href="amenities.html">Amenities &amp; Lifestyle</a>
+        <a href="dining.html">Private Dining</a>
+        <a href="booking.html">Book a Stay</a>
+        <a href="pricing.html">Pricing &amp; Availability</a>
+        <a href="location.html">Location</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>1 Ocean Peninsula Drive<br>Private Bay</p>
+        <a href="tel:+10000000000">+1 (000) 000-0000</a>
+        <a href="mailto:private@malikresidences.com">private@malikresidences.com</a>
+      </div>
+      <div class="footer-col footer-news">
+        <h4>The Malik List</h4>
+        <p>Private previews and new releases, before they are announced publicly.</p>
+        <form id="newsForm">
+          <input type="email" placeholder="Your email address" required aria-label="Email address">
+          <button type="submit" aria-label="Subscribe"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9h12M10 4l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </form>
+        <small class="news-note" id="newsNote">By invitation only.</small>
+      </div>
+    </div>
+    <div class="footer-word" aria-hidden="true">MALIK</div>
+    <div class="footer-bottom">
+      <span>© 2026 Malik Residences. All rights reserved.</span>
+      <div><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/booking.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/property.js"></script>
+</body>
+</html>

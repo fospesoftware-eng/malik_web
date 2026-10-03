@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Malik Private Residences</title>
+<meta name="description" content="The house of Malik — a family atelier building private residences shaped by hand and attended for life.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 140'%3E%3Crect width='100' height='140' fill='%23111316'/%3E%3Cpath fill-rule='evenodd' fill='%23D9BC73' d='M50 6 L59 20 V64 H41 V20 Z M50 25 L47 29 V58 H53 V29 Z'/%3E%3Cpath d='M14 134 V34 L45 62' stroke='%23D9BC73' stroke-width='8' fill='none'/%3E%3Cpath d='M86 134 V34 L55 62' stroke='%23D9BC73' stroke-width='8' fill='none'/%3E%3Cpath d='M44 76 V134' stroke='%23D9BC73' stroke-width='8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://trae-api-cn.mchost.guru">
+<link rel="preconnect" href="https://lf-cdn.trae.com.cn" crossorigin>
+<link rel="dns-prefetch" href="https://lf-cdn.trae.com.cn">
+<link rel="dns-prefetch" href="https://trae-api-cn.mchost.guru">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+  (function(){
+    var t = localStorage.getItem('malik-theme'); if (!t) t = 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Malik — home">
+      <svg class="brand-mark" viewBox="0 0 100 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path fill-rule="evenodd" d="M50 6 L59 20 V64 H41 V20 Z M50 25 L47 29 V58 H53 V29 Z" fill="currentColor"/>
+        <path d="M14 134 V34 L45 62" stroke="currentColor" stroke-width="8" stroke-linejoin="miter"/>
+        <path d="M86 134 V34 L55 62" stroke="currentColor" stroke-width="8" stroke-linejoin="miter"/>
+        <path d="M44 76 V134" stroke="currentColor" stroke-width="8"/>
+      </svg>
+      <span class="brand-name">MALIK</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="residences.html" class="nav-link">Residences</a>
+      <a href="amenities.html" class="nav-link">Amenities</a>
+      <a href="dining.html" class="nav-link">Dining</a>
+      <a href="pricing.html" class="nav-link">Pricing</a>
+      <a href="location.html" class="nav-link">Location</a>
+      <a href="about.html" class="nav-link active">About</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch between light and dark theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 13.4A8.5 8.5 0 0 1 10.6 3.8a8.5 8.5 0 1 0 9.6 9.6Z"/></svg>
+      </button>
+      <a href="booking.html" class="btn btn-pill btn-gold header-enquire magnetic"><span>Book Your Stay</span>
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9.5 4.5 13 8l-3.5 3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <button class="burger" id="menuOpen" aria-label="Open menu"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu-head">
+    <span class="brand"><svg class="brand-mark" viewBox="0 0 100 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path fill-rule="evenodd" d="M50 6 L59 20 V64 H41 V20 Z M50 25 L47 29 V58 H53 V29 Z" fill="currentColor"/>
+      <path d="M14 134 V34 L45 62" stroke="currentColor" stroke-width="8" stroke-linejoin="miter"/>
+      <path d="M86 134 V34 L55 62" stroke="currentColor" stroke-width="8" stroke-linejoin="miter"/>
+      <path d="M44 76 V134" stroke="currentColor" stroke-width="8"/>
+    </svg><span class="brand-name">MALIK</span></span>
+    <button class="menu-close" id="menuClose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+  </div>
+  <nav class="mobile-nav" aria-label="Mobile">
+    <a href="residences.html"><em>01</em>Residences</a>
+    <a href="amenities.html"><em>02</em>Amenities &amp; Lifestyle</a>
+    <a href="dining.html"><em>03</em>Private Dining</a>
+    <a href="booking.html"><em>04</em>Book a Stay</a>
+    <a href="pricing.html"><em>05</em>Pricing &amp; Availability</a>
+    <a href="location.html"><em>06</em>Location</a>
+    <a href="about.html"><em>07</em>About</a>
+  </nav>
+  <a href="booking.html" class="btn btn-pill btn-gold mobile-cta"><span>Reserve Your Stay</span></a>
+</div>
+
+<main>
+<section class="page-hero">
+  <img class="ph-img" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Ultra%20luxury%20modern%20cliffside%20villa%20exterior%20at%20golden%20hour%2C%20white%20stone%20architecture%2C%20sculptural%20infinity%20pool%20merging%20with%20the%20ocean%2C%20dramatic%20coastal%20cliffs%2C%20cinematic%20architectural%20photography%2C%20photorealistic&image_size=landscape_16_9" alt="Cliffside villa at golden hour">
+  <div class="ph-veil"></div>
+  <div class="wrap ph-content">
+    <nav class="crumbs light"><a href="index.html">Home</a><i>/</i><span>About</span></nav>
+    <p class="hero-eyebrow ph-eyebrow"><span class="gold-line"></span>07 — The House of Malik<span class="gold-line"></span></p>
+    <h1 class="ph-title">A home, made by<br><em class="gold-serif">hand and heart</em></h1>
+    <p class="ph-sub">Malik began as one family’s way of hosting — and became a house devoted to a single belief: that luxury is being known.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap about-grid">
+    <div class="about-media reveal">
+      <img loading="lazy" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Interior%20of%20ultra%20luxury%20modern%20glass%20mansion%2C%20double%20height%20floor%20to%20ceiling%20windows%2C%20elegant%20white%20designer%20sofas%2C%20polished%20travertine%20floor%2C%20infinity%20pool%20and%20tall%20pine%20trees%20outside%2C%20soft%20daylight%2C%20architectural%20digest%2C%20photorealistic&image_size=portrait_4_3" alt="Light-filled great hall of a Malik residence">
+      <div class="about-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2 4 5.5V12c0 5 3.4 8.4 8 10 4.6-1.6 8-5 8-10V5.5L12 2Z"/><path d="m8.4 12 2.4 2.4 4.8-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Est. as a family home<br>Hosted as an atelier</span>
+      </div>
+    </div>
+    <div class="reveal" style="--d:.12s">
+      <p class="section-label"><span class="sl-num">Our Story</span> Began at a dinner table</p>
+      <h2 class="section-title" style="margin:18px 0 0">Built like a home.<br><em class="gold-serif">Run like a house.</em></h2>
+      <p class="about-text">The first Malik residence was never meant to be a business. It was a family house on the coast where every guest left insisting the world should be hosted this way — quietly anticipated, beautifully fed, never performed. When the doors opened beyond the family, one rule travelled with them: no guest should ever feel like one.</p>
+      <p class="about-text">Today Malik is a small atelier of architects, hosts, chefs and gardeners who build each residence as if it were our own — then staff it around the clock. Ten private homes now stand across the coast, the lake and the sky, and not one of them shares a floor plan.</p>
+      <div class="about-stats">
+        <div class="stat"><strong class="count" data-count="10">0</strong><span>One-of-one residences</span></div>
+        <div class="stat"><strong class="count" data-count="48">0</strong><span>House team members</span></div>
+        <div class="stat"><strong class="count" data-count="120">0</strong><span>Artisans per home</span></div>
+        <div class="stat"><strong class="count" data-count="1">0</strong><span>Way you’re treated</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <p class="section-label light"><span class="sl-num">What we hold to</span> The Malik Standard</p>
+        <h2 class="section-title light">Three vows<br>we don’t <em class="gold-serif">decorate</em></h2>
+      </div>
+      <p class="section-head-note">Everything else — marble, menus, motorcades — is merely the means of keeping them.</p>
+    </div>
+    <div class="svc-grid values">
+      <article class="svc-card reveal"><span class="svc-glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 21s-7-4.6-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.4-7 10-7 10Z" stroke-linejoin="round"/></svg></span><h3>Hosted, Never Serviced</h3><p>Anticipation over procedure. A team that knows your name, your habits and when to disappear.</p></article>
+      <article class="svc-card reveal" style="--d:.1s"><span class="svc-glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3v4m0 10v4M3 12h4m10 0h4M6 6l2.5 2.5m7 7L18 18m0-12-2.5 2.5m-7 7L6 18" stroke-linecap="round"/><circle cx="12" cy="12" r="3"/></svg></span><h3>One of One</h3><p>No floor plan is repeated. Stone, art and gardens are chosen for the light of that exact address.</p></article>
+      <article class="svc-card reveal" style="--d:.2s"><span class="svc-glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 19c2.5-6 5.5-9 8-9s5.5 3 8 9" stroke-linecap="round"/><path d="M12 4v3M8 6.5 9.5 9M16 6.5 14.5 9" stroke-linecap="round"/></svg></span><h3>Quiet by Default</h3><p>Privacy is engineered in — private roads, staff passages, soundproofed rooms — so the house stays yours.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <p class="section-label"><span class="sl-num">The Road</span> From family table to estate</p>
+        <h2 class="section-title">A short history<br>of <em class="gold-serif">long evenings</em></h2>
+      </div>
+    </div>
+    <ol class="timeline">
+      <li class="reveal"><span class="tl-year">2014</span><div class="tl-body"><h3>The First Table</h3><p>The family coastal house opens its kitchen to travelling friends. A chef, a host, one very long table.</p></div></li>
+      <li class="reveal" style="--d:.08s"><span class="tl-year">2017</span><div class="tl-body"><h3>The House Goes Further</h3><p>Two neighbouring villas join the family, staffed by the same team. Guests begin staying for weeks.</p></div></li>
+      <li class="reveal" style="--d:.16s"><span class="tl-year">2021</span><div class="tl-body"><h3>The Peninsula</h3><p>Malik acquires the private peninsula grounds — spa, cinema, cellar and cove become part of the house.</p></div></li>
+      <li class="reveal" style="--d:.24s"><span class="tl-year">2024</span><div class="tl-body"><h3>Ten Residences</h3><p>The Coastal Collection completes: ten one-of-one homes across cliff, coast, sky, garden and lake.</p></div></li>
+      <li class="reveal" style="--d:.32s"><span class="tl-year">2026</span><div class="tl-body"><h3>You, Arriving</h3><p>Short stays open to guests beyond the circle — the next chapter begins at your check-in.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section cta-section">
+  <div class="wrap">
+    <div class="cta-card reveal">
+      <img class="cta-img" loading="lazy" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Ultra%20luxury%20villa%20terrace%20at%20twilight%20with%20warm%20glowing%20interiors%20overlooking%20infinity%20pool%20and%20calm%20sea%2C%20first%20stars%20in%20sky%2C%20cinematic%20atmospheric%2C%20photorealistic&image_size=landscape_16_9" alt="Villa terrace at twilight">
+      <div class="cta-veil"></div>
+      <div class="cta-content">
+        <p class="cta-eyebrow"><span class="gold-line"></span>Come as a guest, leave as family<span class="gold-line"></span></p>
+        <h2 class="cta-title">Your seat<br>at the <em class="gold-serif">table</em></h2>
+        <p class="cta-sub">Choose a residence and your dates — we’ll have the house lit, the pantry filled and the table set.</p>
+        <div class="cta-actions">
+          <a href="booking.html" class="btn btn-pill btn-gold magnetic btn-lg"><span>Reserve Your Stay</span>
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9.5 4.5 13 8l-3.5 3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="residences.html" class="btn btn-pill btn-ghost btn-lg"><span>View Residences</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand light" href="index.html" aria-label="Malik — home">
+          <svg class="brand-mark" viewBox="0 0 100 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path fill-rule="evenodd" d="M50 6 L59 20 V64 H41 V20 Z M50 25 L47 29 V58 H53 V29 Z" fill="currentColor"/>
+            <path d="M14 134 V34 L45 62" stroke="currentColor" stroke-width="8" stroke-linejoin="miter"/>
+            <path d="M86 134 V34 L55 62" stroke="currentColor" stroke-width="8" stroke-linejoin="miter"/>
+            <path d="M44 76 V134" stroke="currentColor" stroke-width="8"/>
+          </svg>
+          <span class="brand-name">MALIK</span>
+        </a>
+        <p>Ultra-luxury private residences, shaped by hand and attended for life.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M7.5 10.5V17M7.5 7.4v.1M11 17v-3.6a2.4 2.4 0 0 1 4.8 0V17M11 17v-6.5" stroke-linecap="round"/></svg></a>
+          <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
+        </div>
+      </div>
+      <nav class="footer-col" aria-label="Footer — explore">
+        <h4>Explore</h4>
+        <a href="residences.html">Residences</a>
+        <a href="amenities.html">Amenities &amp; Lifestyle</a>
+        <a href="dining.html">Private Dining</a>
+        <a href="booking.html">Book a Stay</a>
+        <a href="pricing.html">Pricing &amp; Availability</a>
+        <a href="location.html">Location</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>1 Ocean Peninsula Drive<br>Private Bay</p>
+        <a href="tel:+10000000000">+1 (000) 000-0000</a>
+        <a href="mailto:private@malikresidences.com">private@malikresidences.com</a>
+      </div>
+      <div class="footer-col footer-news">
+        <h4>The Malik List</h4>
+        <p>Private previews and new releases, before they are announced publicly.</p>
+        <form id="newsForm">
+          <input type="email" placeholder="Your email address" required aria-label="Email address">
+          <button type="submit" aria-label="Subscribe"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9h12M10 4l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </form>
+        <small class="news-note" id="newsNote">By invitation only.</small>
+      </div>
+    </div>
+    <div class="footer-word" aria-hidden="true">MALIK</div>
+    <div class="footer-bottom">
+      <span>© 2026 Malik Residences. All rights reserved.</span>
+      <div><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
