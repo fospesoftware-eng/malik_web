@@ -875,8 +875,8 @@ ul{list-style:none}
   display:flex;align-items:center;justify-content:center;gap:8px;width:100%;
   font-family:'Jost',sans-serif;font-size:.62rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
   color:#23190A;white-space:nowrap;
-  border:1px solid transparent;border-radius:999px;
-  padding:13px 18px;line-height:1;
+  border:none;border-radius:999px;
+  padding:14px 18px;line-height:1;
   background:var(--gold-grad);background-size:200% auto;
   box-shadow:0 14px 40px -14px rgba(168,128,48,.55),inset 0 1px 0 rgba(255,255,255,.4);
   transition:background-position .4s var(--ease),box-shadow .4s var(--ease),letter-spacing .35s var(--ease);
