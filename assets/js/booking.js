@@ -63,6 +63,24 @@
   }
   function stripTime(d) { return new Date(d.getFullYear(), d.getMonth(), d.getDate()); }
 
+  /* Deterministic per-residence unavailable dates (seeded by property index) */
+  function isBlocked(key, propertyId) {
+    var idx = MALIK.PROPERTIES.findIndex(function (x) { return x.id === propertyId; });
+    var seed = idx < 0 ? 0 : idx + 3;
+    var p = key.split('-');
+    var y = +p[0], m = +p[1], d = +p[2];
+    var h = (y * 13 + m * 31 + d * 7 + seed * 17) % 23;
+    return h < 3; // ~13% of dates unavailable, stable per property
+  }
+  function rangeHasBlocked(a, b, propertyId) {
+    var d = parse(a), end = parse(b);
+    while (d < end) {
+      if (isBlocked(fmt(d), propertyId)) return true;
+      d.setDate(d.getDate() + 1);
+    }
+    return false;
+  }
+
   function quote() {
     var prop = MALIK.getProperty(state.propertyId);
     var n = nights();
@@ -73,7 +91,7 @@
     return { nights: n, rate: prop.price, rent: rent, cleaning: cleaning, service: service, tax: tax, total: rent + cleaning + service + tax };
   }
   function money(v) {
-    return MALIK.SERVICE.currency + v.toLocaleString('en-US');
+    return MALIK.SERVICE.currency + v.toLocaleString('en-GB');
   }
 
   /* ---------------- Range calendar ---------------- */
@@ -110,7 +128,7 @@
         '</div>';
     }
     this.el.innerHTML =
-      '<div class="bk-legend"><span class="lg in">Check-in / out</span><span class="lg between">Your stay</span></div>' +
+      '<div class="bk-legend"><span class="lg in">Check-in / out</span><span class="lg between">Your stay</span><span class="lg blocked">Unavailable</span></div>' +
       '<div class="bk-months months-' + this.monthsToShow + '">' + monthsHtml + '</div>';
   };
 
@@ -124,13 +142,15 @@
       var d = new Date(monthDate.getFullYear(), monthDate.getMonth(), day);
       var key = fmt(d);
       var cls = 'bk-day';
+      var blocked = d >= this.today && isBlocked(key, state.propertyId);
       if (d < this.today) cls += ' is-disabled';
+      if (blocked) cls += ' is-disabled is-blocked';
       if (key === state.checkIn) cls += ' is-bound is-in';
       if (key === state.checkOut) cls += ' is-bound is-out';
       if (this._between(key)) cls += ' is-between';
       if (this._hoverBetween(key)) cls += ' is-hover-range';
       if (key === fmt(this.today)) cls += ' is-today';
-      html += '<button type="button" class="' + cls + '" data-date="' + key + '"' + (d < this.today ? ' disabled' : '') + '>' + day + '</button>';
+      html += '<button type="button" class="' + cls + '" data-date="' + key + '"' + ((d < this.today || blocked) ? ' disabled' : '') + '>' + day + '</button>';
     }
     return html;
   };
@@ -174,6 +194,7 @@
 
   Calendar.prototype._pick = function (key) {
     var prop = MALIK.getProperty(state.propertyId);
+    if (isBlocked(key, state.propertyId)) return;
     if (!state.checkIn || (state.checkIn && state.checkOut)) {
       state.checkIn = key;
       state.checkOut = null;
@@ -187,6 +208,9 @@
         // restart selection from the new date, with a gentle hint
         state.checkIn = key; state.checkOut = null;
         flashMin(prop.minNights);
+      } else if (rangeHasBlocked(state.checkIn, key, state.propertyId)) {
+        state.checkIn = key; state.checkOut = null;
+        flashMin(0);
       } else {
         state.checkOut = key;
       }
@@ -214,9 +238,9 @@
   function flashMin(n) {
     var note = document.querySelector('[data-bk-minnote]');
     if (!note) return;
-    note.textContent = 'Minimum stay ' + n + ' nights';
+    note.textContent = n === 0 ? 'Some dates in that range are unavailable' : 'Minimum stay ' + n + ' nights';
     note.classList.add('is-flash');
-    setTimeout(function () { note.classList.remove('is-flash'); }, 1600);
+    setTimeout(function () { note.classList.remove('is-flash'); }, 1800);
   }
 
   /* ---------------- Shared renderers ---------------- */
@@ -239,7 +263,7 @@
       '<div class="bk-sum-line"><span>Service &amp; concierge (12%)</span><b>' + (q.nights ? money(q.service) : '—') + '</b></div>' +
       '<div class="bk-sum-line"><span>Taxes (5%)</span><b>' + (q.nights ? money(q.tax) : '—') + '</b></div>' +
       '<div class="bk-sum-total"><span>Estimated total</span><b>' + (q.nights ? money(q.total) : '—') + '</b></div>' +
-      '<p class="bk-sum-fine">Free cancellation up to 30 days before arrival. Charged in USD.</p>';
+      '<p class="bk-sum-fine">Free cancellation up to 30 days before arrival. Charged in GBP.</p>';
   }
 
   function renderDateBadges(inEl, outEl) {
@@ -308,12 +332,25 @@
     var step = 1;
 
     function renderPicker() {
+      var nightsEl = root.querySelector('[data-results-nights]');
+      var n = nights();
+      var hasDates = state.checkIn && state.checkOut;
+
+      if (nightsEl) {
+        nightsEl.textContent = hasDates
+          ? n + (n === 1 ? ' night' : ' nights') + ' · ' + human(state.checkIn) + ' → ' + human(state.checkOut)
+          : 'Select dates to see total';
+      }
+
       picker.innerHTML = MALIK.PROPERTIES.map(function (p) {
+        var priceHtml = hasDates
+          ? money(n * p.price) + '<i>' + n + ' nights · ' + money(p.price) + '/night</i>'
+          : money(p.price) + '<i>per night</i>';
         return '<button type="button" class="pick-card' + (p.id === state.propertyId ? ' is-sel' : '') + '" data-pick="' + p.id + '">' +
           '<span class="pick-img"><img src="' + p.card + '" alt="' + p.name + '" loading="lazy"></span>' +
-          '<span class="pick-body"><b>' + p.name + '</b><small>' + p.area + '</small>' +
-          '<small class="pick-spec">' + p.beds + ' beds · Sleeps ' + p.guests + '</small></span>' +
-          '<span class="pick-price">' + money(p.price) + '<i>/night</i></span>' +
+          '<span class="pick-body"><b>' + p.name + '</b>' +
+          '<small>' + p.beds + ' bed · Sleeps ' + p.guests + ' · ' + p.sqm + ' sqm</small></span>' +
+          '<span class="pick-price">' + priceHtml + '</span>' +
         '</button>';
       }).join('');
     }
@@ -328,6 +365,7 @@
 
     function refresh() {
       renderSummary(summaryEl);
+      renderPicker();
       if (guestsEl) {
         var prop = MALIK.getProperty(state.propertyId);
         guestsEl.max = prop.guests;
@@ -339,14 +377,22 @@
     }
 
     renderPicker();
-    new Calendar(calEl, { months: 2, onChange: refresh });
+    var cal = new Calendar(calEl, { months: 2, onChange: refresh });
     if (guestsEl) guestsEl.value = state.guests;
     refresh();
 
     picker.addEventListener('click', function (e) {
       var card = e.target.closest('[data-pick]');
       if (!card) return;
-      state.propertyId = card.getAttribute('data-pick');
+      var nextId = card.getAttribute('data-pick');
+      if (nextId === state.propertyId) return;
+      state.propertyId = nextId;
+      // Drop selected dates if they conflict with the new residence's availability
+      if (state.checkIn && (isBlocked(state.checkIn, nextId) ||
+          (state.checkOut && (isBlocked(state.checkOut, nextId) || rangeHasBlocked(state.checkIn, state.checkOut, nextId))))) {
+        state.checkIn = null; state.checkOut = null;
+      }
+      cal._render();
       renderPicker();
       refresh();
     });

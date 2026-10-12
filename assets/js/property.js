@@ -102,7 +102,7 @@
 
           '<aside class="prop-side">' +
             '<div class="book-card" data-property="' + p.id + '">' +
-              '<div class="bc-price">From <b>$' + p.price.toLocaleString('en-US') + '</b><span>per night · min ' + p.minNights + ' nights</span></div>' +
+              '<div class="bc-price">From <b>£' + p.price.toLocaleString('en-GB') + '</b><span>per night · min ' + p.minNights + ' nights</span></div>' +
               '<div class="bc-cal" data-cal></div>' +
               '<div class="bc-guests">' +
                 '<label for="bcGuests">Guests</label>' +
@@ -160,7 +160,7 @@
             others.map(function (o) {
               return '<a class="sim-card tilt" href="property.html?id=' + encodeURIComponent(o.id) + '">' +
                 '<span class="sim-media"><img src="' + o.card + '" alt="' + o.name + '" loading="lazy"></span>' +
-                '<span class="sim-body"><b>' + o.name + '</b><small>' + o.beds + ' beds · sleeps ' + o.guests + '</small><em>$' + o.price.toLocaleString('en-US') + ' /night</em></span>' +
+                '<span class="sim-body"><b>' + o.name + '</b><small>' + o.beds + ' beds · sleeps ' + o.guests + '</small><em>£' + o.price.toLocaleString('en-GB') + ' /night</em></span>' +
               '</a>';
             }).join('') +
           '</div>' +

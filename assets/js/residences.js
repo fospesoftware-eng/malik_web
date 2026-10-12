@@ -17,7 +17,7 @@
           '<td data-th="Beds">' + p.beds + '</td>' +
           '<td data-th="Sleeps">' + p.guests + '</td>' +
           '<td data-th="Min. stay">' + p.minNights + ' nights</td>' +
-          '<td data-th="From / night" class="rt-price">$' + p.price.toLocaleString('en-US') + '</td>' +
+          '<td data-th="From / night" class="rt-price">£' + p.price.toLocaleString('en-GB') + '</td>' +
           '<td data-th="" class="rt-action"><a href="booking.html?property=' + encodeURIComponent(p.id) + '">Book <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 7h8M8 4l3 3-3 3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></td>' +
         '</tr>';
       }).join('');
@@ -144,7 +144,7 @@
         return '<a class="map-pin ' + dir + '" data-mp="' + p.id + '" href="property.html?id=' + encodeURIComponent(p.id) + '" ' +
           'style="left:' + p.map.x + '%;top:' + p.map.y + '%" aria-label="' + p.name + '">' +
           '<span class="mp-dot"></span>' +
-          '<span class="mp-card"><b>' + p.name + '</b><small>' + p.beds + ' bd · sleeps ' + p.guests + ' · from $' + p.price.toLocaleString('en-US') + '</small></span>' +
+          '<span class="mp-card"><b>' + p.name + '</b><small>' + p.beds + ' bd · sleeps ' + p.guests + ' · from £' + p.price.toLocaleString('en-GB') + '</small></span>' +
         '</a>';
       }).join('');
       drawMap(MALIK.PROPERTIES);
@@ -176,7 +176,7 @@
           '</div>' +
           '<div class="res-tags">' + tags + '</div>' +
           '<div class="qv-foot">' +
-            '<span class="res-price">From <b>$' + p.price.toLocaleString('en-US') + '</b><i>/night</i></span>' +
+            '<span class="res-price">From <b>£' + p.price.toLocaleString('en-GB') + '</b><i>/night</i></span>' +
             '<span class="qv-actions">' +
               '<a class="btn btn-pill btn-dark" href="property.html?id=' + encodeURIComponent(p.id) + '"><span>Full residence</span></a>' +
               '<a class="btn btn-pill btn-gold" href="booking.html?property=' + encodeURIComponent(p.id) + '"><span>Book now</span>' +

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Endless Pool &amp; Sun Deck — The Residence by Malik</title>
+<meta name="description" content="A counter-current endless pool set in a walled brick courtyard, shaded by a louvered pergola and wrapped in warm timber decking — included with every residence.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+  (function(){
+    var t = localStorage.getItem('malik-theme'); if (!t) t = 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="The Residence by Malik — home">
+      <img class="brand-mark" src="assets/img/logo-emblem.png" alt="" width="196" height="314"><span class="brand-name">THE RESIDENCE<small>BY MALIK</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <div class="nav-item has-sub">
+        <a href="residences.html" class="nav-link">Residences</a>
+        <svg class="sub-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg>
+        <div class="nav-sub">
+          <a href="residence-110.html">The Studio <span>110</span></a>
+          <a href="residence-124.html">The Luxe Studio <span>124</span></a>
+          <a href="residence-304.html">Terrace Studio <span>304</span></a>
+          <a href="residence-328.html">One Bedroom <span>328</span></a>
+        </div>
+      </div>
+      <div class="nav-item has-sub">
+        <a href="amenities.html" class="nav-link active">Amenities</a>
+        <svg class="sub-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 4.5 6 8l3.5-3.5"/></svg>
+        <div class="nav-sub">
+          <a href="amenity-pool.html">Pool &amp; Sun Deck <span>01</span></a>
+          <a href="amenity-gym.html">Performance Gym <span>02</span></a>
+          <a href="amenity-spa.html">Spa, Sauna &amp; Steam <span>03</span></a>
+          <a href="amenity-cinema.html">The Cinema <span>04</span></a>
+          <a href="amenity-teppanyaki.html">Teppanyaki Bar <span>05</span></a>
+          <a href="amenity-dining.html">Dining Hall &amp; Study <span>06</span></a>
+          <a href="amenity-lounge.html">Residents' Lounge <span>07</span></a>
+          <a href="amenity-boardroom.html">Boardrooms <span>08</span></a>
+          <a href="amenity-podcast.html">Podcast Studio <span>09</span></a>
+          <a href="amenity-games.html">Games Room <span>10</span></a>
+        </div>
+      </div>
+      <a href="dining.html" class="nav-link">Dining</a>
+
+      <a href="location.html" class="nav-link">Location</a>
+      <a href="about.html" class="nav-link">About</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch between light and dark theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5 5l1.7 1.7M17.3 17.3 19 19M19 5l-1.7 1.7M6.7 17.3 5 19"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 13.4A8.5 8.5 0 0 1 10.6 3.8a8.5 8.5 0 1 0 9.6 9.6Z"/></svg>
+      </button>
+      <a href="booking.html" class="btn btn-pill btn-gold header-enquire magnetic"><span>Book Your Stay</span>
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9.5 4.5 13 8l-3.5 3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <button class="burger" id="menuOpen" aria-label="Open menu"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu-head">
+    <span class="brand"><img class="brand-mark" src="assets/img/logo-emblem.png" alt="" width="196" height="314"><span class="brand-name">THE RESIDENCE<small>BY MALIK</small></span></span>
+    <button class="menu-close" id="menuClose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+  </div>
+  <nav class="mobile-nav" aria-label="Mobile">
+    <a href="residences.html"><em>01</em>Residences</a>
+    <a class="m-sub" href="residence-110.html"><em>110</em>The Studio</a>
+    <a class="m-sub" href="residence-124.html"><em>124</em>The Luxe Studio</a>
+    <a class="m-sub" href="residence-304.html"><em>304</em>Terrace Studio</a>
+    <a class="m-sub" href="residence-328.html"><em>328</em>One Bedroom</a>
+    <a href="amenities.html"><em>02</em>Amenities &amp; Lifestyle</a>
+    <a class="m-sub" href="amenity-pool.html"><em>01</em>Pool &amp; Sun Deck</a>
+    <a class="m-sub" href="amenity-gym.html"><em>02</em>Performance Gym</a>
+    <a class="m-sub" href="amenity-spa.html"><em>03</em>Spa, Sauna &amp; Steam</a>
+    <a class="m-sub" href="amenity-cinema.html"><em>04</em>The Cinema</a>
+    <a class="m-sub" href="amenity-teppanyaki.html"><em>05</em>Teppanyaki Bar</a>
+    <a class="m-sub" href="amenity-dining.html"><em>06</em>Dining Hall &amp; Study</a>
+    <a class="m-sub" href="amenity-lounge.html"><em>07</em>Residents' Lounge</a>
+    <a class="m-sub" href="amenity-boardroom.html"><em>08</em>Boardrooms</a>
+    <a class="m-sub" href="amenity-podcast.html"><em>09</em>Podcast Studio</a>
+    <a class="m-sub" href="amenity-games.html"><em>10</em>Games Room</a>
+    <a href="dining.html"><em>03</em>Private Dining</a>
+    <a href="booking.html"><em>04</em>Book a Stay</a>
+
+    <a href="location.html"><em>06</em>Location</a>
+    <a href="about.html"><em>07</em>About</a>
+  </nav>
+  <a href="booking.html" class="btn btn-pill btn-gold mobile-cta"><span>Reserve Your Stay</span></a>
+</div>
+
+<main>
+<!-- HERO -->
+<section class="page-hero">
+  <img class="ph-img" src="assets/img/amenities/pool-hero.webp" alt="The endless pool with turquoise water under a louvered pergola in the brick courtyard">
+  <div class="ph-veil"></div>
+  <div class="wrap ph-content">
+    <nav class="crumbs light"><a href="index.html">Home</a><i>/</i><a href="amenities.html">Amenities</a><i>/</i><span>Pool &amp; Sun Deck</span></nav>
+    <p class="hero-eyebrow ph-eyebrow"><span class="gold-line"></span>01 — The Communals<span class="gold-line"></span></p>
+    <h1 class="ph-title">The Endless Pool<br><em class="gold-serif">&amp; Sun Deck</em></h1>
+    <p class="ph-sub">A counter-current swim pool set in a walled brick courtyard, shaded by a louvered pergola and wrapped in warm timber decking — included with every residence.</p>
+  </div>
+</section>
+
+<!-- ACCESS STRIP -->
+<section class="section section-access">
+  <div class="wrap">
+    <div class="access-strip reveal">
+      <div class="as-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Open daily</b><span>06:00 — 22:00</span></div></div>
+      <div class="as-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><div><b>Included</b><span>with every residence</span></div></div>
+      <div class="as-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg><div><b>Private use</b><span>residents only</span></div></div>
+      <div class="as-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8 8 10 4.5-2 8-5 8-10V6l-8-4Z"/></svg><div><b>Towels &amp; showers</b><span>provided poolside</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO + FACTS -->
+<section class="section section-snug">
+  <div class="wrap amen-facts">
+    <div class="amen-lede reveal">
+      <p class="section-label"><span class="sl-num">The Space</span> Swim against the current</p>
+      <h2 class="section-title">A pool that never<br><em class="gold-serif">ends</em></h2>
+      <p>The counter-current system lets you swim in place for as long as you like — no turns, no crowding, just water moving past you at the pace you set. Set it gentle for a recovery swim, or push it hard for a proper session.</p>
+      <p>Around it, a walled brick courtyard keeps the city at bay. The louvered pergola softens the midday sun; the timber deck stays warm underfoot long after it sets. Towels, cold drinks and a monsoon shower are kept within reach.</p>
+    </div>
+    <aside class="ri-specs reveal">
+      <h4>At a Glance</h4>
+      <ul>
+        <li><span>Pool type</span><b>Counter-current endless</b></li>
+        <li><span>Setting</span><b>Walled brick courtyard</b></li>
+        <li><span>Shade</span><b>Louvered timber pergola</b></li>
+        <li><span>Decking</span><b>Warm timber, full perimeter</b></li>
+        <li><span>Showers</span><b>Poolside monsoon</b></li>
+        <li><span>Towels</span><b>Provided poolside</b></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- PHOTO MOSAIC -->
+<!-- MOMENT -->
+<section class="section section-snug">
+  <div class="wrap moment-row reveal">
+    <div class="moment-media"><img src="assets/img/amenities/pool-04.webp" alt="Timber sun deck and loungers beside the endless pool"></div>
+    <div class="moment-body">
+      <p class="section-label"><span class="sl-num">The Ritual</span> From dawn to dusk</p>
+      <h2 class="section-title">Swim at dawn,<br><em class="gold-serif">stretch at noon</em></h2>
+      <p>The pool is quietest at first light — the courtyard still in shadow, the water glass-still before the current wakes it. By noon the pergola throws slatted light across the deck, and the loungers become the day's second office.</p>
+      <p>In the evening the brick walls hold the day's warmth, and the pool turns gold. It is the house's most consistent pleasure, available whenever you are.</p>
+      <blockquote class="gold-quote">The only courtyard in the house where the clock runs slower.<cite>— The Endless Pool</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE TILES -->
+<section class="section section-dark section-snug">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <p class="section-label light"><span class="sl-num">Everything Included</span> Around the pool</p>
+        <h2 class="section-title light">The deck, the<br><em class="gold-serif">shade, the shower</em></h2>
+      </div>
+      <p class="section-head-note">Everything you need for a morning swim or a long afternoon on the deck — already in place, attended quietly.</p>
+    </div>
+    <div class="feat3-grid">
+      <article class="feat3-card reveal"><div class="feat3-media"><img loading="lazy" src="assets/img/amenities/pool-03.webp" alt="Counter-current endless pool"></div><div class="feat3-body"><h3>Counter-Current Swim</h3><p>Adjust the flow for a gentle recovery swim or a hard session — swim in place, no turns needed.</p><span class="feat3-meta">Included</span></div></article>
+      <article class="feat3-card reveal" style="--d:.06s"><div class="feat3-media"><img loading="lazy" src="assets/img/amenities/pool-01.webp" alt="Louvered pergola over the pool deck"></div><div class="feat3-body"><h3>Louvered Pergola</h3><p>Timber slats throw soft, moving shade across the deck through the hottest hours of the day.</p><span class="feat3-meta">Included</span></div></article>
+      <article class="feat3-card reveal" style="--d:.12s"><div class="feat3-media"><img loading="lazy" src="assets/img/amenities/pool-04.webp" alt="Timber sun deck and loungers"></div><div class="feat3-body"><h3>Sun Deck &amp; Loungers</h3><p>Warm timber decking wraps the pool, with loungers, towels and cold drinks kept within reach.</p><span class="feat3-meta">Included</span></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section-snug">
+  <div class="wrap">
+    <div class="room-grid reveal">
+      <figure class="rg rg-main"><img src="assets/img/amenities/pool-02.webp" alt="Endless swim pool under a louvered pergola in the brick courtyard"></figure>
+      <figure class="rg"><img loading="lazy" src="assets/img/amenities/pool-01.webp" alt="Pergola and pool deck from the garden"></figure>
+      <figure class="rg"><img loading="lazy" src="assets/img/amenities/pool-05.webp" alt="Pool and courtyard in evening light"></figure>
+      <figure class="rg"><img loading="lazy" src="assets/img/amenities/pool-03.webp" alt="Counter-current pool, side view"></figure>
+      <figure class="rg"><img loading="lazy" src="assets/img/amenities/pool-04.webp" alt="Timber sun deck and loungers"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section cta-section section-snug">
+  <div class="wrap">
+    <div class="cta-card reveal">
+      <img class="cta-img" loading="lazy" src="assets/img/photos/twilight.webp" alt="Villa terrace at twilight">
+      <div class="cta-veil"></div>
+      <div class="cta-content">
+        <p class="cta-eyebrow"><span class="gold-line"></span>Pool &amp; Sun Deck — included with every stay<span class="gold-line"></span></p>
+        <h2 class="cta-title">Your morning swim<br><em class="gold-serif">is waiting</em></h2>
+        <p class="cta-sub">Book any residence and the whole house opens with it — pool, gym, spa, cinema and the long table included.</p>
+        <div class="cta-actions">
+          <a href="booking.html" class="btn btn-pill btn-gold magnetic btn-lg"><span>Book Your Stay</span>
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9.5 4.5 13 8l-3.5 3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="amenity-gym.html" class="btn btn-pill btn-ghost btn-lg"><span>Next: The Gym</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="footer-logo-link" href="index.html" aria-label="The Residence by Malik — home">
+          <img class="footer-logo" src="assets/img/logo-full.png" alt="The Residence by Malik" width="595" height="560">
+        </a>
+        <p>The Residence on East Parade · by Malik Living</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M7.5 10.5V17M7.5 7.4v.1M11 17v-3.6a2.4 2.4 0 0 1 4.8 0V17M11 17v-6.5" stroke-linecap="round"/></svg></a>
+          <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 4l16 16M20 4 4 20"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3Z"/><path d="M8.5 8.8c.2-.5.4-.5.7-.5h.5c.2 0 .4 0 .6.5l.7 1.6c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.3.5.8 1.1 1.4 1.5.7.5 1.2.6 1.5.4l.5-.5c.2-.2.4-.2.6-.1l1.5.8c.3.1.4.2.4.4 0 .8-.8 1.5-1.3 1.6-.6.1-1.3.2-3.2-1.5-2.4-2.2-2-3.9-1.9-4.3.1-.3.4-.7.7-.9Z"/></svg></a>
+        </div>
+      </div>
+      <nav class="footer-col" aria-label="Footer — room types">
+        <h4>Room Types</h4>
+        <a href="residence-110.html">The Studio · 110</a>
+        <a href="residence-124.html">The Luxe Studio · 124</a>
+        <a href="residence-304.html">Terrace Studio · 304</a>
+        <a href="residence-328.html">One Bedroom · 328</a>
+        <a href="residences.html">All Residences</a>
+      </nav>
+      <nav class="footer-col" aria-label="Footer — facilities">
+        <h4>Facilities</h4>
+        <a href="amenity-pool.html">Pool &amp; Sun Deck</a>
+        <a href="amenity-gym.html">Performance Gym</a>
+        <a href="amenity-spa.html">Spa, Sauna &amp; Steam</a>
+        <a href="amenity-cinema.html">The Cinema</a>
+        <a href="amenity-teppanyaki.html">Teppanyaki Bar</a>
+      </nav>
+      <nav class="footer-col" aria-label="Footer — explore">
+        <h4>Explore</h4>
+        <a href="dining.html">Private Dining</a>
+        <a href="location.html">Location</a>
+        <a href="about.html">About</a>
+        <a href="booking.html">Book a Stay</a>
+        <a href="amenities.html">All Amenities</a>
+      </nav>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>East Parade, Leeds, LS1</p>
+        <a href="tel:01132029999">0113 202 9999</a>
+        <a href="mailto:enquiries@malikliving.co.uk">enquiries@malikliving.co.uk</a>
+      </div>
+    </div>
+    <div class="footer-word" aria-hidden="true">RESIDENCE</div>
+    <div class="footer-bottom">
+      <span>© 2026 Malik Living. All rights reserved.</span>
+      <div><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js?v=4"></script>
+</body>
+</html>

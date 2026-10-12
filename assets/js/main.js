@@ -13,6 +13,7 @@
      ═══════════════════════════════════════════════════════════ */
   function enhanceImg(img) {
     if (img.__mlkImg || !img) return;
+    if (img.closest('.brand, .footer-logo-link')) return; /* logos render instantly */
     img.__mlkImg = true;
     img.decoding = 'async';
     img.classList.add('mlk-img');
@@ -254,6 +255,22 @@
   window.addEventListener('scroll', heroParallaxScroll, { passive: true });
   heroParallaxScroll();
 
+  /* ---------- Hero video triptych — all three play simultaneously ---------- */
+  const heroVideosWrap = document.getElementById('heroVideos');
+  if (heroVideosWrap && !prefersReduced) {
+    const vids = Array.from(heroVideosWrap.querySelectorAll('.hero-video'));
+    vids.forEach(v => {
+      const p = v.play();
+      if (p && p.catch) p.catch(() => { /* autoplay blocked — poster image stays visible */ });
+    });
+    document.addEventListener('visibilitychange', () => {
+      vids.forEach(v => {
+        if (document.hidden) v.pause();
+        else { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
+      });
+    });
+  }
+
   /* ---------- Feature residence cycler ---------- */
   const fmImgs = document.querySelectorAll('.fm-img');
   const fmThumbs = document.querySelectorAll('.ft-thumb');
@@ -378,7 +395,7 @@
   });
 
   /* ═══════════════════════════════════════════════════════════
-     PREMIUM UI KIT — wishlist · cards · cursor · back-to-top
+     PREMIUM UI KIT — wishlist · cards · back-to-top
      ═══════════════════════════════════════════════════════════ */
   const MALIK = window.MALIK;
 
@@ -470,7 +487,7 @@
           '<span><b>' + p.sqm + '</b> m²</span>' +
         '</div>' +
         '<div class="res-foot">' +
-          '<span class="res-price">From <b>$' + p.price.toLocaleString('en-US') + '</b><i>/night</i></span>' +
+          '<span class="res-price">From <b>£' + p.price.toLocaleString('en-GB') + '</b><i>/night</i></span>' +
           '<a class="res-cta" href="property.html?id=' + encodeURIComponent(p.id) + '">View residence <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 8h10M9.5 4.5 13 8l-3.5 3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>' +
         '</div>' +
       '</div>' +
@@ -541,33 +558,6 @@
         setTimeout(() => { card.style.transition = ''; }, 700);
       });
     });
-  }
-
-  /* ---------- Custom cursor (fine pointers only) ---------- */
-  if (!isTouch && !prefersReduced && window.matchMedia('(pointer:fine)').matches) {
-    document.documentElement.classList.add('cursor-on');
-    const dot = document.createElement('div'); dot.id = 'cursorDot';
-    const ring = document.createElement('div'); ring.id = 'cursorRing';
-    document.body.appendChild(dot); document.body.appendChild(ring);
-    let rx = -100, ry = -100, tx = -100, ty = -100, raf = null;
-    window.addEventListener('mousemove', e => {
-      tx = e.clientX; ty = e.clientY;
-      dot.style.transform = 'translate3d(' + tx + 'px,' + ty + 'px,0)';
-      if (!raf) raf = requestAnimationFrame(ringLoop);
-    }, { passive: true });
-    function ringLoop() {
-      rx += (tx - rx) * 0.18; ry += (ty - ry) * 0.18;
-      ring.style.transform = 'translate3d(' + rx + 'px,' + ry + 'px,0)';
-      if (Math.abs(tx - rx) > 0.12 || Math.abs(ty - ry) > 0.12) raf = requestAnimationFrame(ringLoop);
-      else raf = null;
-    }
-    document.addEventListener('mouseover', e => {
-      ring.classList.toggle('is-hover', !!e.target.closest('a,button,input,select,textarea,label,[data-wish],[data-quick]'));
-    });
-    window.addEventListener('mousedown', () => ring.classList.add('is-down'));
-    window.addEventListener('mouseup', () => ring.classList.remove('is-down'));
-    document.addEventListener('mouseleave', () => { dot.style.opacity = 0; ring.style.opacity = 0; });
-    document.addEventListener('mouseenter', () => { dot.style.opacity = ''; ring.style.opacity = ''; });
   }
 
   /* ---------- Back to top with scroll progress ---------- */
